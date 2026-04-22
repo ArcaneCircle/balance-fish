@@ -1,4 +1,7 @@
-class Hero {
+import { game } from './state.js'
+import { makeID, collide, easeInOutExpo, lerp, mod, pointIsInCircle, posToIndex, random, rgb, sharpSin } from './functions.js'
+
+export default class Hero {
     constructor () {
         // Mandatory
         this.dt = 0

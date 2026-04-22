@@ -1,6 +1,15 @@
-'use strict'
+import { game, hero } from './state.js'
+import { posToIndex, random } from './functions.js'
+import Barrier from './barrier.js'
+import Cable from './cables.js'
+import Power from './powers.js'
+import UglyFish from './ugly-fish.js'
+import Shark from './shark.js'
+import Shrimp from './shrimp.js'
+import Resistor from './resistor.js'
+import GiantPlug from './giant-plug.js'
 
-class Map {
+export default class GameMap {
     constructor() {
         this.cellSize = 600
         this.levels = {

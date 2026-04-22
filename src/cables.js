@@ -1,6 +1,8 @@
-'use strict'
+import { game, hero } from './state.js'
+import { makeID, easeInOutExpo, findAngle, quad, rgb, sharpSin } from './functions.js'
+import { FONT_OFT } from './constants.js'
 
-class Cable {
+export default class Cable {
     constructor(item) {
         // Mandatory
         this.dt = 0

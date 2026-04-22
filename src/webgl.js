@@ -1,6 +1,4 @@
-'use strict'
-
-game.cvs.style.display = 'none'
+import { game } from './state.js'
 
 const fxCanvas = document.getElementById("fx-canvas")
 const gl = fxCanvas.getContext("webgl")
@@ -12,7 +10,6 @@ function FXResize() {
 }
 
 addEventListener('resize', () => FXResize())
-FXResize()
 
 const vertexSource = `
     attribute vec2 a_position;
@@ -94,6 +91,12 @@ gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA,
     fxCanvas.width, fxCanvas.height, 0,
     gl.RGBA, gl.UNSIGNED_BYTE, null)
 
+export function initWebGL() {
+    game.cvs.style.display = 'none'
+    FXResize()
+    FXRun()
+}
+
 function FXRun(now) {
     const dt = (now - lastTime) / 1000
     lastTime = now
@@ -123,5 +126,3 @@ function FXRun(now) {
 
     requestAnimationFrame(FXRun)
 }
-
-FXRun()

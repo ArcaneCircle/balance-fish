@@ -1,6 +1,7 @@
-'use strict'
+import { game, hero } from './state.js'
+import { makeID, collide, easeInOutExpo, rgb } from './functions.js'
 
-class GiantPlug {
+export default class GiantPlug {
     constructor(item) {
         // Mandatory
         this.dt = 0

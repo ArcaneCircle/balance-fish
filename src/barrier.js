@@ -1,6 +1,7 @@
-'use strict'
+import { game, hero } from './state.js'
+import { makeID, collide, easeInOutExpo, rgb } from './functions.js'
 
-class Barrier {
+export default class Barrier {
     constructor(item) {
         // Mandatory
         this.dt = 0

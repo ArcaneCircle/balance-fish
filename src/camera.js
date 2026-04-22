@@ -1,4 +1,7 @@
-class Camera {
+import { game, hero } from './state.js'
+import { random } from './functions.js'
+
+export default class Camera {
     constructor() {
         this.x = 0
         this.y = 0

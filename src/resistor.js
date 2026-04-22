@@ -1,6 +1,9 @@
-'use strict'
+import { game, hero } from './state.js'
+import { makeID, collide, easeInOutExpo, rgb } from './functions.js'
+import { FONT_OFT, DANGER_KEY } from './constants.js'
+import { sound_crash } from './audio.js'
 
-class Resistor {
+export default class Resistor {
     constructor(item) {
         // Mandatory
         this.dt = 0

@@ -1,5 +1,7 @@
-'use strict'
-class Shrimp {
+import { game, hero } from './state.js'
+import { makeID, collide, mod, pointIsInCircle, random, rgb, rgbAdd, rgbPop } from './functions.js'
+
+export default class Shrimp {
     constructor(item) {
         // Mandatory
         this.dt = 0

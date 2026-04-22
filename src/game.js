@@ -1,5 +1,20 @@
-'use strict'
-class Game {
+import { hero } from './state.js'
+import { capDec, collide, easeInOutExpo, posToIndex, random, rgb, sharpSin } from './functions.js'
+import { FONT_OFT, MOBILE } from './constants.js'
+import { music, sound_click, sound_spawn, sound_tapping, startAudio, startMusic } from './audio.js'
+import GameMap from './map.js'
+import Camera from './camera.js'
+
+let xDetachButtonPAD = 0
+let xDetachButtonRAD = 0
+let restartButtonPAD = 0
+let restartButtonRAD = 0
+let PADRAD = 0
+let x1PAD = 0
+let x2PAD = 0
+let yPAD = 0
+
+export default class Game {
     constructor() {
         // Canvas
         this.cvs = document.getElementById('canvas')
@@ -37,7 +52,7 @@ class Game {
 
         // Map
         this.level = 'reactor'
-        this.map = new Map()
+        this.map = new GameMap()
 
         // Camera
         this.cam = new Camera()

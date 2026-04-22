@@ -1,5 +1,7 @@
-'use strict'
-class UglyFish {
+import { game, hero } from './state.js'
+import { makeID, collide, pointIsInCircle, random, rgb } from './functions.js'
+
+export default class UglyFish {
     constructor(item) {
         // Mandatory
         this.dt = 0

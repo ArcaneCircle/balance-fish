@@ -1,5 +1,7 @@
-'use strict'
-class Shark {
+import { game, hero } from './state.js'
+import { makeID, collide, pointIsInCircle, rgb, rgbAdd, rgbPop } from './functions.js'
+
+export default class Shark {
     constructor(item) {
         // Mandatory
         this.dt = 0

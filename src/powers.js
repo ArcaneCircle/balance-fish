@@ -1,8 +1,9 @@
-'use strict'
+import { game, hero } from './state.js'
+import { makeID, collide, easeInOutExpo, lerp, posToIndex, random, rgb } from './functions.js'
+import { FONT_OFT, DANGER_KEY } from './constants.js'
+import { sound_complete_substation, sound_connect_substation } from './audio.js'
 
-// --- The things you plug the cables into ---
-
-class Power {
+export default class Power {
     constructor(item) {
         // Mandatory
         this.dt = 0
