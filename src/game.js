@@ -77,11 +77,13 @@ class Game {
         this.water = new Image()
         this.water.src = 'src/water.png'
 
+        /*
         this.presentImage = new Image()
         this.presentImage.src = 'src/presents-dark.png'
 
         this.plainImage = new Image()
         this.plainImage.src = 'src/plain.png'
+        */
 
         this.plainDarkImage = new Image()
         this.plainDarkImage.src = 'src/plain-dark.png'
