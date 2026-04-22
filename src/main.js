@@ -1,4 +1,3 @@
-import './functions.js'
 import Hero from './hero.js'
 import Game from './game.js'
 import { setHero, setGame } from './state.js'
